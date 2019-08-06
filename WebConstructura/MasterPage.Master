@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebConstructura.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="mdb/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="mdb/css/mdb.min.css" rel="stylesheet" />
+    <link href="mdb/css/estilos.css" rel="stylesheet" />
+    <link href="mdb/css/misc.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="mdb/css/main.css">
+
+
+    <script type="text/javascript" src="mdb/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="mdb/js/popper.min.js"></script>
+    <script type="text/javascript" src="mdb/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+
+            <div class="page-wrapper chiller-theme toggled">
+                <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <nav id="sidebar" class="sidebar-wrapper">
+                    <div class="sidebar-content">
+                        <div class="sidebar-brand">
+                            <a href="#">Constructora 9B</a>
+                            <div id="close-sidebar">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <span class="user-name">Rosendo
+                                <strong>Bonilla</strong>
+                                </span>
+                                <span class="user-role">Administrador</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-menu">
+                            <ul>
+                                <li class="header-menu">
+                                    <span>General</span>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Dashboard.aspx">
+                                        <img src="icons/dash.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Materiales.aspx">
+                                        <img src="icons/material.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Materiales</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Empleado.aspx">
+                                        <img src="icons/empleado.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Empleados</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Sueldos.aspx">
+                                        <img src="icons/sueldos.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Sueldos</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Obra.aspx">
+                                        <img src="icons/obra.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Obras</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Proveedor.aspx">
+                                        <img src="icons/proveedor.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Proveedores</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="Dueno.aspx">
+                                        <img src="icons/cliente.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Dueños</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-dropdown">
+                                    <a href="ControlObra.aspx">
+                                        <img src="icons/controlobra.png" alt="dashboard" />
+                                        <span>&nbsp&nbsp Control de obras</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <main class="contenido-principal">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </main>
+
+
+            </div>
+
+            <%--            <div runat="server" id="divMaster"></div>--%>
+
+            <div class="modal fade" id="modalMensajesMaster" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+                    <div class="modal-content">
+                        <div class="modal-header" id="modalHeaderMensajes" runat="server">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Información</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="mensajeModal" runat="server">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+    <script type="text/javascript" src="mdb/js/mdb.min.js"></script>
+    <script type="text/javascript" src="mdb/js/misc.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿.bg-image {
+    background-image: url(../../imagenes/materials.jpg);
+    object-fit: cover;
+}
+
+.bg-gray-dark {
+    background-color: #45556e;
+}
